@@ -4,7 +4,7 @@
  * Implement method Some
  */
 function applyCustomSome() {
-  [].__proto__.some2 = function() {
+  [].__proto__.some2 = function(callback) {
     // write code here
   };
 }
