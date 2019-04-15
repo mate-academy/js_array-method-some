@@ -10,6 +10,11 @@ test('`some2` is added to [].__proto__', () => {
     .toBeInstanceOf(Function);
 });
 
+test(`some2 doesn't call default some`, () => {
+  expect([].some2.toString().includes('.some('))
+    .toBe(false);
+});
+
 test('for (item) => item > 10', () => {
   expect(source.some2(x => x > 10))
     .toBe(true);
