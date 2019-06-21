@@ -5,8 +5,6 @@
  */
 function applyCustomSome() {
   [].__proto__.some2 = function(callback) {
-    const falseResult = false;
-
     for (let i = 0; i < this.length; i++) {
       const item = this[i];
       const index = i;
@@ -17,7 +15,7 @@ function applyCustomSome() {
       }
     }
 
-    return falseResult;
+    return false;
   };
 }
 
