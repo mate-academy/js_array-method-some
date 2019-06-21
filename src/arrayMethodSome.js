@@ -1,12 +1,16 @@
 'use strict';
-
 /**
  * Implement method Some
  */
 function applyCustomSome() {
   [].__proto__.some2 = function(callback) {
-    // write code here
+    for (let i = 0; i < this.length; i++) {
+      if (callback(this[i], i, this)) {
+        return true;
+      };
+      continue;
+    };
+    return false;
   };
-}
-
+};
 module.exports = applyCustomSome;
