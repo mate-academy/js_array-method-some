@@ -9,7 +9,7 @@ function applyCustomSome() {
       if (callback(this[i], i, this)) {
         return true;
       }
-    }
+    };
 
     return false;
   };
