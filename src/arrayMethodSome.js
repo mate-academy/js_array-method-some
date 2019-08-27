@@ -10,6 +10,7 @@ function applyCustomSome() {
         return true;
       }
     };
+
     return false;
   };
 }
