@@ -1,3 +1,4 @@
+/* eslint-disable padding-line-between-statements */
 'use strict';
 
 const applyCustomSome = require('./arrayMethodSome');
