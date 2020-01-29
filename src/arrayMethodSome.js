@@ -5,7 +5,15 @@
  */
 function applyCustomSome() {
   [].__proto__.some2 = function(callback) {
-    // write code here
+    for (let i = 0; i < this.length; i++) {
+      const isTestPassed = callback(this[i], i, this);
+
+      if (isTestPassed) {
+        return true;
+      }
+    }
+
+    return false;
   };
 }
 
