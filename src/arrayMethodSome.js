@@ -5,13 +5,13 @@
  */
 function applyCustomSome() {
   [].__proto__.some2 = function(callback) {
-    let result;
-
     for (let i = 0; i < this.length; i++) {
-      result = callback(this[i], i, this);
+      if (callback(this[i], i, this)) {
+        return true;
+      }
     }
 
-    return result || false;
+    return false;
   };
 }
 
