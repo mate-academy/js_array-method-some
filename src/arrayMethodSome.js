@@ -5,8 +5,8 @@
  */
 function applyCustomSome() {
   [].__proto__.some2 = function(callback) {
-    for (let i = 0; i < this.length; i++) {
-      if (callback(this[i], i, this) === true) {
+    for (let idex = 0; idex < this.length; idex++) {
+      if (callback(this[idex], idex, this) === true) {
         return true;
       }
     }
