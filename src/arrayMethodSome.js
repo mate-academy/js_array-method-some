@@ -13,11 +13,9 @@ function applyCustomSome() {
       if (callback(this[i], i, this)) {
         return true;
       }
-
-      if (!callback(this[i], i, this) && i === (this.length - 1)) {
-        return false;
-      }
     }
+
+    return false;
   };
 }
 
