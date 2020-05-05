@@ -3,6 +3,7 @@
 const applyCustomSome = require('./arrayMethodSome');
 
 const source = [0, 10, 20, 30];
+
 applyCustomSome();
 
 test('`some2` is added to [].__proto__', () => {
