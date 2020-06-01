@@ -5,7 +5,15 @@
  */
 function applyCustomSome() {
   [].__proto__.some2 = function(callback) {
-    // write code here
+    for (let i = 0; i < this.length; i++) {
+      const searchCondition = callback(this[i], i, this);
+
+      if (searchCondition) {
+        return true;
+      }
+    }
+
+    return false;
   };
 }
 
