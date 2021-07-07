@@ -6,6 +6,7 @@
 function applyCustomSome() {
   [].__proto__.some2 = function(callback) {
     // write code here
+    return this.find(callback) !== undefined;
   };
 }
 
